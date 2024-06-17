@@ -54,4 +54,4 @@ Required criteria:
 
 ==============================================================
 
-HiveHelper
+HiveHelper - A school project
