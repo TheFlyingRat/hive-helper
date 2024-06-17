@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="HiveHelper, helping beekeepers manage their hives with ease.">
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+    <main>
+        <h1>Welcome to HiveHelper, <%= username %>!</h1>
+        <h2>Select a navigation item below to navigate</h2>
+        <a href="/livehealth">Live Health - See the live health statistics of your bee hives</a>
+        <a href="/hives">Hives - View, create, or delete your bee hives</a>
+        <a href="/schedule">Schedule - View, create, or delete events in your schedule</a>
+    </main>
+
+    <footer class="footer">
+        Copyright &copy; 2024 HiveHelper & Joey Manani. <a href="https://cdn.theflyingrat.com/LICENSE">Licensing</a>
+        <br>
+        Dedicated for Richard Smith, expert beekeeper since 2001. 
+    </footer>
+    <style>
+        h2 { font-size: 1.7rem }
+        main > a { font-size: 1.4rem; display: block; margin: 15px 5px 0 0; color: var(--accent)}
+        main > a:hover { filter: brightness(40%); }
+        footer { font-size: 1.4rem; bottom: 1vh; margin-left: 15px; position: absolute; width: calc(100% - 15px); text-align: center;}
+        footer > a { color: initial }
+        @media only screen and (max-width: 604px) {
+            h1 { font-size: 2.1rem }
+            h2 { font-size: 1.3rem }
+        }
+    </style>
+</body>
+</html>
+    

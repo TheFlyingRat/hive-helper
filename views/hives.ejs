@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Manage and edit your hives">
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/hives.css">
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+
+    <main>
+        <h1>Hives</h1>
+        <button id="modalCreate">Create New Hive</button>
+        <button id="modalDelete">Delete Hive</button>
+
+        <!-- Dual modal container for both create and delete a hive. Shows based on the js attached on the page -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">Create New Hive</h2>
+                <form id="createHiveForm">
+                    <label for="hiveName">Hive Name:</label>
+                    <input type="text" id="hiveName" name="hiveName" required><br>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required><br>
+                    <label for="hiveType">Hive Type:</label>
+                    <input type="text" id="hiveType" name="hiveType" required><br>
+                    <button type="submit">Create Hive</button>
+                </form>
+                <form id="deleteHiveForm">
+                    <label for="hiveName">Hive ID:</label>
+                    <input type="text" id="hiveID" name="hiveID" required><br>
+                    <button type="submit">Delete Hive</button>
+                </form>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="hiveTable" class="hive-table">
+                <thead>
+                    <tr id="tableHeader"></tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <style>
+        main { font-size: 1.4rem; }
+    </style>
+    <script src="/scripts/hives.js"></script>
+</body>
+</html>

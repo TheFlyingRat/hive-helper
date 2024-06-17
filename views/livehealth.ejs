@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="See the live health statistics of your hives">
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/livehealth.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+
+
+    <main>
+        <h1><img draggable=false src="/images/live.gif" style="height: 2rem"> Live Health</h1>
+        
+        <!-- TODO: Fix bug that occurs when the canvas gets cleared and user has scrolled a bit (canvas area is unallocated and thus user forced to scroll up)-->
+
+        <div class="menu">
+            <label class="select-hive" for="hiveSelect">Select Hive:</label>
+            <select class="hive-dropdown" id="hiveSelect"></select>
+        </div>
+        <div class="container">
+            <canvas id="temperatureChart"></canvas>
+            <canvas id="humidityChart"></canvas>
+            <canvas id="activityChart"></canvas>
+        </div>
+        <script>
+        </script>
+        
+
+    </main>
+
+    <script src="/scripts/livehealth.js"></script>
+</body>
+</html>

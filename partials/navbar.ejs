@@ -1,0 +1,138 @@
+<!-- Start navbar.ejs -->
+<header class="header">
+    <nav class="navbar">
+        <a href="/" class="nav-logo"><img src="/images/logo.png" style="height: 3rem"></a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="/livehealth" class="nav-link">Live Health</a>
+            </li>
+            <li class="nav-item">
+                <a href="/hives" class="nav-link">Hives</a>
+            </li>
+            <li class="nav-item">
+                <a href="/schedule" class="nav-link">Schedule</a>
+            </li>
+            <li class="nav-item">
+                <a href="/logout" class="nav-link" style="color: red; font-weight: 600">Log Out</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+
+<script src="/scripts/navbar.js"></script>
+
+<style>   
+    li {
+        list-style: none;
+    }
+    
+    li > a, nav > a {
+        text-decoration: none;
+    }
+    
+    .header {
+        border-bottom: 1px solid #E2E8F0;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #101010;
+    }
+    
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    
+    .nav-item {
+        margin-left: 5rem;
+    }
+    
+    .nav-link{
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #475569;
+    }
+    
+    .nav-link:hover{
+        color: var(--accent);
+    }
+    
+    .nav-logo {
+        font-size: 2.1rem;
+        font-weight: 500;
+        color: var(--accent);
+    }
+    
+    @media only screen and (max-width: 604px) {
+        .nav-menu {
+            z-index: 2; /* Schedule calendar appears on top of this without a z index */
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow:
+                0 10px 27px rgba(0, 0, 0, 0.05);
+        }
+    
+        .nav-menu.active {
+            left: 0;
+        }
+    
+        .nav-item {
+            margin: 2.5rem 0;
+        }
+    
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+    
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+    
+        .hamburger.active .bar:nth-child(1) {
+            -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+        }
+    
+        .hamburger.active .bar:nth-child(3) {
+            -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+</style>
+
+<!-- End navbar.ejs -->

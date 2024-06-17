@@ -1,0 +1,50 @@
+-- Table for storing information about beekeepers
+CREATE TABLE Beekeepers (
+    beekeeper_id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE,
+    phone_number TEXT,
+    address TEXT,
+    password TEXT NOT NULL
+);
+
+-- Table for recording hive data
+CREATE TABLE Hives (
+    hive_id INTEGER PRIMARY KEY,
+    beekeeper_id INTEGER NOT NULL,
+    hive_name TEXT NOT NULL,
+    location TEXT,
+    hive_type TEXT,
+    FOREIGN KEY (beekeeper_id) REFERENCES Beekeepers(beekeeper_id)
+);
+
+-- Table for tracking hive health indicators
+CREATE TABLE HiveHealth (
+    health_id INTEGER PRIMARY KEY,
+    hive_id INTEGER NOT NULL,
+    temperature REAL,
+    humidity REAL,
+    activity_level TEXT,
+    timestamp DATETIME DEFAULT (datetime('now', '+11 hours')),
+    FOREIGN KEY (hive_id) REFERENCES Hives(hive_id)
+);
+
+-- Table for coordinating beekeeping tasks
+CREATE TABLE Tasks (
+    task_id INTEGER PRIMARY KEY,
+    hive_id INTEGER NOT NULL,
+    task_description TEXT NOT NULL,
+    due_date DATE,
+    completed BOOLEAN DEFAULT 0,
+    FOREIGN KEY (hive_id) REFERENCES Hives(hive_id)
+);
+
+-- Table for storing reminders and notifications
+CREATE TABLE Reminders (
+    reminder_id INTEGER PRIMARY KEY,
+    beekeeper_id INTEGER NOT NULL,
+    reminder_text TEXT NOT NULL,
+    due_date DATE,
+    reminder_type TEXT,
+    FOREIGN KEY (beekeeper_id) REFERENCES Beekeepers(beekeeper_id)
+);

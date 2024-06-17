@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/stylesheets/signin.css">
+    <meta name="description" content="HiveHelper, helping beekeepers manage their hives with ease.">
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <div class="centered">
+        <div class="container">
+            <h1>HiveHelper</h1>
+            <div class="login-border">
+                <h2>Welcome Back!</h2>
+                <form id="loginForm">
+                    <input type="email" value="joeymanani@joeymanani.com" autocomplete required placeholder="Email" name="email" class="form-field">
+                    <br>
+                    <input type="password" value="password123" autocomplete required placeholder="Password" name="password" class="form-field">
+                    <br>
+                    <span><input type="checkbox" name="remember" class="form-checkbox"> Remember</span>
+                    <br>
+                    <input type="submit" class="form-button" name="login" value="Log In" />
+                    <a href="/signup">No account? Sign up here.</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/login.js"></script>
+</body>
+</html>

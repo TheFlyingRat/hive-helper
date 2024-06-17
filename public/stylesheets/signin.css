@@ -1,0 +1,10 @@
+.centered { min-height: 80vh; display: flex; align-items: center; justify-content: center;}
+.container { display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.login-border { border: 1px solid black; padding: 20px; }
+form { width: 100%; height: 100%; display: flex; justify-content: center; flex-direction: column; min-width: 25vw}
+form > * { margin-top: 1vh; }
+h2 { margin: 0px; margin-bottom: 20px; }
+.form-field { height: 1.2em; padding: 0.2em;}
+.form-button { width: 100%; padding: 10px; }
+a { color: var(--accent); }
+:root { font-size: 100% !important }
