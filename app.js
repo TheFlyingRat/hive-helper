@@ -1,7 +1,7 @@
 /*
  *     HiveHelper
  *     (c) Joey Manani 2024
- *     Version 1.0.0
+ *     Version 1.0.0-LivePatch
  * 
  *     Licensed under the Joey Manani License <https://cdn.theflyingrat.com/LICENSE>
  * 
