@@ -2,7 +2,7 @@
 
 HiveHelper
 (c) Joey Manani 2024
-Version 1.0.0
+Version 1.0.0-LivePatch
 
 Licensed under the Joey Manani License <https://cdn.theflyingrat.com/LICENSE>
 Dedicated for Richard Smith, beekeeper.
@@ -14,7 +14,7 @@ All methods implemented in this software are as a PROOF OF CONCEPT and are not e
 ================================================================
 
 
-Production app can be found at https://hivehelper.prod.theflyingrat.com
+Production app can be found at https://hivehelper.theflyingrat.com
 
 To run locally:
 1. Please install `Nodejs v21.0.0` (https://nodejs.org/dist/v21.0.0/win-x64/node.exe)
